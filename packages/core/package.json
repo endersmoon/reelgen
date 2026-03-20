@@ -31,5 +31,6 @@
   "devDependencies": {
     "@types/culori": "^2.1.1",
     "jsdom": "^29.0.0"
-  }
+  },
+  "gitHead": "a05489abfbfe6f19b45ce2005fc287828cc25d10"
 }

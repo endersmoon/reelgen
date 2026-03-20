@@ -23,5 +23,6 @@
   "dependencies": {
     "posthog-node": "^4.0.0",
     "uuid": "^9.0.1"
-  }
+  },
+  "gitHead": "a05489abfbfe6f19b45ce2005fc287828cc25d10"
 }

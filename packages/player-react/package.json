@@ -26,5 +26,6 @@
     "react": "^18",
     "react-dom": "^18",
     "uuid": "^10.0.0"
-  }
+  },
+  "gitHead": "a05489abfbfe6f19b45ce2005fc287828cc25d10"
 }

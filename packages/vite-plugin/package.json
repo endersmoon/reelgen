@@ -33,11 +33,12 @@
   },
   "dependencies": {
     "@reelgen/ffmpeg": "0.10.4",
-    "ws": "^8.19.0",
     "fast-glob": "^3.3.1",
     "follow-redirects": "^1.15.2",
     "formidable": "^3.5.1",
     "mime-types": "^2.1.35",
-    "source-map": "^0.6.1"
-  }
+    "source-map": "^0.6.1",
+    "ws": "^8.19.0"
+  },
+  "gitHead": "a05489abfbfe6f19b45ce2005fc287828cc25d10"
 }

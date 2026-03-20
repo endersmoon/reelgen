@@ -25,5 +25,6 @@
     "@reelgen/core": "0.10.4",
     "sass": "^1.58.0",
     "terser": "^5.16.1"
-  }
+  },
+  "gitHead": "a05489abfbfe6f19b45ce2005fc287828cc25d10"
 }
