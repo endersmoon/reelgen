@@ -1,4 +1,4 @@
-import {makeProject} from '@revideo/core';
+import {makeProject} from '@reelgen/core';
 
 import node from './scenes/positioning';
 

@@ -14,9 +14,9 @@ export default [
     plugins: [
       {
         resolveId(id) {
-          if (id.startsWith('@revideo/core')) {
+          if (id.startsWith('@reelgen/core')) {
             return {
-              id: '@revideo/core',
+              id: '@reelgen/core',
               external: true,
             };
           }

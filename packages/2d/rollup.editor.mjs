@@ -10,7 +10,7 @@ export default [
       sourcemap: true,
       dir: './editor',
     },
-    external: [/^@revideo/, /^@?preact/, './index.css'],
+    external: [/^@reelgen/, /^@?preact/, './index.css'],
     plugins: [
       resolve(),
       postcss({

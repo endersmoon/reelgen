@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 //@ts-check
-import {EventName, sendEvent} from '@revideo/telemetry';
+import {EventName, sendEvent} from '@reelgen/telemetry';
 import fs from 'fs';
 import kleur from 'kleur';
 import minimist from 'minimist';

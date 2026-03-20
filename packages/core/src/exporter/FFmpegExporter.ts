@@ -44,7 +44,7 @@ export interface FfmpegExporterOptions {
  * initialized by invoking `start`.
  */
 export class FFmpegExporterClient implements Exporter {
-  public static readonly id = '@revideo/core/ffmpeg';
+  public static readonly id = '@reelgen/core/ffmpeg';
   public static readonly displayName = 'Video (FFmpeg)';
 
   private readonly settings: RendererSettings;

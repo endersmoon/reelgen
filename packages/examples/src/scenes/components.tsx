@@ -1,6 +1,6 @@
-import {makeScene2D} from '@revideo/2d';
-import {createRef, waitFor} from '@revideo/core';
-import {Switch} from '@revideo/examples/src/components/Switch';
+import {makeScene2D} from '@reelgen/2d';
+import {createRef, waitFor} from '@reelgen/core';
+import {Switch} from '@reelgen/examples/src/components/Switch';
 // see this import for the component ^
 
 // usage of the component:

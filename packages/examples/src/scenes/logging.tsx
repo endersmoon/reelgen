@@ -1,5 +1,5 @@
-import {Circle, makeScene2D} from '@revideo/2d';
-import {useLogger, waitFor} from '@revideo/core';
+import {Circle, makeScene2D} from '@reelgen/2d';
+import {useLogger, waitFor} from '@reelgen/core';
 
 export default makeScene2D('logging', function* (view) {
   const logger = useLogger();

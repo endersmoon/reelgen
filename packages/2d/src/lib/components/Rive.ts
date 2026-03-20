@@ -1,5 +1,5 @@
-import type {SignalValue, SimpleSignal} from '@revideo/core';
-import {BBox, useThread} from '@revideo/core';
+import type {SignalValue, SimpleSignal} from '@reelgen/core';
+import {BBox, useThread} from '@reelgen/core';
 import type {
   Artboard,
   File,

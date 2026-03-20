@@ -1,5 +1,5 @@
-import {Rect, Txt, makeScene2D} from '@revideo/2d';
-import {waitFor} from '@revideo/core';
+import {Rect, Txt, makeScene2D} from '@reelgen/2d';
+import {waitFor} from '@reelgen/core';
 
 export default makeScene2D('transitions-first', function* (view) {
   view.add(

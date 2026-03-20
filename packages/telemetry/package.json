@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/telemetry",
+  "name": "@reelgen/telemetry",
   "version": "0.10.4",
   "description": "Telemetry for Revideo. Check the documentation to learn how to disable it.",
   "main": "dist/index.js",

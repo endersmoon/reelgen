@@ -3,8 +3,8 @@ import type {
   SignalValue,
   SimpleSignal,
   Vector2Signal,
-} from '@revideo/core';
-import {map} from '@revideo/core';
+} from '@reelgen/core';
+import {map} from '@reelgen/core';
 import {initial, nodeName, signal, vector2Signal} from '../decorators';
 import type {ShapeProps} from './Shape';
 import {Shape} from './Shape';
@@ -29,8 +29,8 @@ export interface GridProps extends ShapeProps {
  *
  * @preview
  * ```tsx editor
- * import {Grid, makeScene2D} from '@revideo/2d';
- * import {all, createRef} from '@revideo/core';
+ * import {Grid, makeScene2D} from '@reelgen/2d';
+ * import {all, createRef} from '@reelgen/core';
  *
  * export default makeScene2D(function* (view) {
  *   const grid = createRef<Grid>();

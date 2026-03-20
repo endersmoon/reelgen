@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/core",
+  "name": "@reelgen/core",
   "version": "0.10.4",
   "description": "A web-based framework for creating videos programmatically",
   "main": "lib/index.js",

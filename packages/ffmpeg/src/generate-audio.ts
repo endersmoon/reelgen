@@ -1,4 +1,4 @@
-import type {AssetInfo, FfmpegExporterOptions} from '@revideo/core';
+import type {AssetInfo, FfmpegExporterOptions} from '@reelgen/core';
 import * as ffmpeg from 'fluent-ffmpeg';
 import * as fs from 'fs';
 import * as os from 'os';

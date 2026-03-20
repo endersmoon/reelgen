@@ -1,5 +1,5 @@
-import {Circle, makeScene2D} from '@revideo/2d';
-import {createRef, map, tween} from '@revideo/core';
+import {Circle, makeScene2D} from '@reelgen/2d';
+import {createRef, map, tween} from '@reelgen/core';
 
 export default makeScene2D('tweening-linear', function* (view) {
   const circle = createRef<Circle>();

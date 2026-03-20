@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/e2e",
+  "name": "@reelgen/e2e",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,14 +8,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@revideo/2d": "*",
-    "@revideo/core": "*",
-    "@revideo/ffmpeg": "*",
+    "@reelgen/2d": "*",
+    "@reelgen/core": "*",
+    "@reelgen/ffmpeg": "*",
     "jest-image-snapshot": "^6.2.0",
     "puppeteer": "^24.0.0"
   },
   "devDependencies": {
-    "@revideo/ui": "*",
-    "@revideo/vite-plugin": "*"
+    "@reelgen/ui": "*",
+    "@reelgen/vite-plugin": "*"
   }
 }

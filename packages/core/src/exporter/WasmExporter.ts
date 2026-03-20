@@ -6,7 +6,7 @@ import {download} from './download-videos';
 import type {Exporter} from './Exporter';
 
 export class WasmExporter implements Exporter {
-  public static readonly id = '@revideo/core/wasm';
+  public static readonly id = '@reelgen/core/wasm';
   public static readonly displayName = 'Video (Wasm)';
 
   public static async create(project: Project, settings: RendererSettings) {

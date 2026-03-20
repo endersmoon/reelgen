@@ -1,4 +1,4 @@
-import {EventName, sendEvent} from '@revideo/telemetry';
+import {EventName, sendEvent} from '@reelgen/telemetry';
 import * as ffmpeg from 'fluent-ffmpeg';
 import * as fs from 'fs';
 import * as os from 'os';

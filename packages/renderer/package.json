@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/renderer",
+  "name": "@reelgen/renderer",
   "version": "0.10.4",
   "description": "A headless renderer for revideo",
   "main": "lib/server/index.js",
@@ -20,13 +20,13 @@
     "types"
   ],
   "dependencies": {
-    "@revideo/ffmpeg": "0.10.4",
-    "@revideo/vite-plugin": "0.10.4",
+    "@reelgen/ffmpeg": "0.10.4",
+    "@reelgen/vite-plugin": "0.10.4",
     "puppeteer": "^24.0.0",
     "vite": "^6.4.1"
   },
   "devDependencies": {
-    "@revideo/core": "0.10.4",
+    "@reelgen/core": "0.10.4",
     "ncp": "^2.0.0"
   }
 }

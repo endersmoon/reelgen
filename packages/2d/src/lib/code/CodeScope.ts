@@ -1,5 +1,5 @@
-import type {SignalValue} from '@revideo/core';
-import {unwrap} from '@revideo/core';
+import type {SignalValue} from '@reelgen/core';
+import {unwrap} from '@reelgen/core';
 import type {PossibleCodeFragment} from './CodeFragment';
 import {isCodeMetrics} from './CodeMetrics';
 

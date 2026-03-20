@@ -1,6 +1,6 @@
-import type {RenderVideoUserProjectSettings} from '@revideo/core';
-import type {FfmpegSettings} from '@revideo/ffmpeg';
-import motionCanvas from '@revideo/vite-plugin';
+import type {RenderVideoUserProjectSettings} from '@reelgen/core';
+import type {FfmpegSettings} from '@reelgen/ffmpeg';
+import motionCanvas from '@reelgen/vite-plugin';
 import * as crypto from 'crypto';
 import * as os from 'os';
 import * as path from 'path';

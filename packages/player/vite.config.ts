@@ -16,7 +16,7 @@ export default defineConfig({
       fileName: 'main',
     },
     rollupOptions: {
-      external: ['@revideo/core'],
+      external: ['@reelgen/core'],
     },
   },
   plugins: [

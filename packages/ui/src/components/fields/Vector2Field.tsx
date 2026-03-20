@@ -1,4 +1,4 @@
-import type {Vector2} from '@revideo/core';
+import type {Vector2} from '@reelgen/core';
 import {useFormattedNumber} from '../../hooks';
 import {Field, FieldSet, FieldValue, NumericField} from './Layout';
 

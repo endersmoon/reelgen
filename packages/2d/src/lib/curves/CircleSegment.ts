@@ -1,4 +1,4 @@
-import {Vector2, clamp} from '@revideo/core';
+import {Vector2, clamp} from '@reelgen/core';
 import type {CurvePoint} from './CurvePoint';
 import {Segment} from './Segment';
 

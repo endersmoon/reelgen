@@ -1,1 +1,1 @@
-/// <reference types="@revideo/core/project" />
+/// <reference types="@reelgen/core/project" />

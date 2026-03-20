@@ -1,5 +1,5 @@
-import type {Signal} from '@revideo/core';
-import {Color} from '@revideo/core';
+import type {Signal} from '@reelgen/core';
+import {Color} from '@reelgen/core';
 import type {CanvasStyle, PossibleCanvasStyle} from '../partials';
 import {canvasStyleParser} from '../utils';
 import {initial, interpolation, parser, signal} from './signal';

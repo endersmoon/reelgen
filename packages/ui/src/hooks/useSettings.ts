@@ -1,4 +1,4 @@
-import {getFullPreviewSettings, getFullRenderingSettings} from '@revideo/core';
+import {getFullPreviewSettings, getFullRenderingSettings} from '@reelgen/core';
 import {useApplication} from '../contexts';
 
 export function useSharedSettings() {
