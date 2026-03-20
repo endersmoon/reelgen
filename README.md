@@ -15,6 +15,8 @@
 </p>
 <br/>
 
+> **Note:** This is a personal fork of [Revideo](https://github.com/redotvideo/revideo), maintained independently. The original project is no longer actively maintained, so this fork exists to continue development and apply custom modifications.
+
 # Revideo - Create Videos with Code
 
 Revideo is an open source framework for programmatic video editing. It is forked
