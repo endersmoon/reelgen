@@ -36,8 +36,9 @@ Individual packages can be built/dev'd via `npm run <package>:<command>` (e.g.,
 
 ## Architecture
 
-Revideo is a **TypeScript video animation framework** organized as a Lerna
-monorepo with npm workspaces. All packages live under `packages/`.
+Reelgen (forked from Revideo) is a **TypeScript video animation framework**
+organized as a Lerna monorepo with npm workspaces. All packages are scoped
+under `@reelgen/*` and live under `packages/`.
 
 ### Core packages
 
@@ -55,7 +56,8 @@ monorepo with npm workspaces. All packages live under `packages/`.
   `vite-plugin/src/standalone-server.ts` is a standalone HTTP + WebSocket server
   that handles all non-Vite backend concerns (FFmpeg bridge, image/video export,
   WASM serving, Rive). It starts on a random port and communicates with the
-  browser via `window.__REVIDEO_BACKEND_PORT__`.
+  browser via `window.__REVIDEO_BACKEND_PORT__` (global name kept for
+  compatibility).
 
 ### UI & player packages
 
@@ -66,8 +68,8 @@ monorepo with npm workspaces. All packages live under `packages/`.
 ### Tooling packages
 
 - **cli** — CLI (`revideo serve`, `revideo editor`) built with Commander +
-  Express.
-- **create** — Project scaffolding (`npm init @revideo@latest`).
+  Express. Package is `@reelgen/cli`; the binary name remains `revideo`.
+- **create** — Project scaffolding (`npm init @reelgen@latest`).
 - **template** — Example project used for local development and testing changes.
 - **e2e** — E2E test suite.
 
