@@ -1,5 +1,5 @@
-import type {SignalValue, SimpleSignal} from '@revideo/core';
-import {BBox, capitalize, lazy, textLerp} from '@revideo/core';
+import type {SignalValue, SimpleSignal} from '@reelgen/core';
+import {BBox, capitalize, lazy, textLerp} from '@reelgen/core';
 import {
   computed,
   initial,

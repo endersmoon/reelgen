@@ -1,5 +1,5 @@
-import {Circle, makeScene2D} from '@revideo/2d';
-import {all, createRef} from '@revideo/core';
+import {Circle, makeScene2D} from '@reelgen/2d';
+import {all, createRef} from '@reelgen/core';
 
 export default makeScene2D('quickstart', function* (view) {
   const myCircle = createRef<Circle>();

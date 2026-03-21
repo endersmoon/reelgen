@@ -6,7 +6,7 @@ import {
   experimentalLog,
   getFullPreviewSettings,
   type Project,
-} from '@revideo/core';
+} from '@reelgen/core';
 import type {ComponentChild} from 'preact';
 import {render} from 'preact';
 import {Editor} from './Editor';

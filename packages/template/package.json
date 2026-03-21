@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/template",
+  "name": "@reelgen/template",
   "private": true,
   "version": "0.0.0",
   "description": "Basic project template for revideo",
@@ -12,13 +12,13 @@
     "render": "tsc && node dist/render.js"
   },
   "dependencies": {
-    "@revideo/2d": "*",
-    "@revideo/core": "*",
-    "@revideo/ffmpeg": "*",
-    "@revideo/renderer": "*"
+    "@reelgen/2d": "*",
+    "@reelgen/core": "*",
+    "@reelgen/ffmpeg": "*",
+    "@reelgen/renderer": "*"
   },
   "devDependencies": {
-    "@revideo/ui": "*",
-    "@revideo/vite-plugin": "*"
+    "@reelgen/ui": "*",
+    "@reelgen/vite-plugin": "*"
   }
 }

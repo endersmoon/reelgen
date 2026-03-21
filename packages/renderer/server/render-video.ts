@@ -1,8 +1,8 @@
 import type {
   FfmpegExporterOptions,
   RenderVideoUserProjectSettings,
-} from '@revideo/core';
-import type {FfmpegSettings} from '@revideo/ffmpeg';
+} from '@reelgen/core';
+import type {FfmpegSettings} from '@reelgen/ffmpeg';
 import {
   audioCodecs,
   concatenateMedia,
@@ -11,9 +11,9 @@ import {
   extensions,
   getVideoDuration,
   mergeAudioWithVideo,
-} from '@revideo/ffmpeg';
-import {EventName, sendEvent} from '@revideo/telemetry';
-import motionCanvas from '@revideo/vite-plugin';
+} from '@reelgen/ffmpeg';
+import {EventName, sendEvent} from '@reelgen/telemetry';
+import motionCanvas from '@reelgen/vite-plugin';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
@@ -465,7 +465,7 @@ async function cleanup(
 const defaultSettings: RenderSettings = {
   projectSettings: {
     exporter: {
-      name: '@revideo/core/wasm',
+      name: '@reelgen/core/wasm',
     },
   },
 };

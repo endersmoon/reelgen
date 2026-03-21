@@ -1,7 +1,7 @@
-import type {RenderVideoUserProjectSettings} from '@revideo/core';
-import type {FfmpegSettings} from '@revideo/ffmpeg';
-import {ffmpegSettings} from '@revideo/ffmpeg';
-import {standaloneServerPort} from '@revideo/vite-plugin';
+import type {RenderVideoUserProjectSettings} from '@reelgen/core';
+import type {FfmpegSettings} from '@reelgen/ffmpeg';
+import {ffmpegSettings} from '@reelgen/ffmpeg';
+import {standaloneServerPort} from '@reelgen/vite-plugin';
 import * as fs from 'fs';
 import * as path from 'path';
 import type {Plugin, ViteDevServer} from 'vite';
@@ -146,8 +146,8 @@ export function rendererPlugin(
           : JSON.stringify({});
 
         return `\
-            import {render} from '@revideo/renderer/lib/client/render';
-            import {Vector2} from '@revideo/core';
+            import {render} from '@reelgen/renderer/lib/client/render';
+            import {Vector2} from '@reelgen/core';
             import project from '${config.projectFile}';
 
             // Read video variables

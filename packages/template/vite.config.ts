@@ -6,18 +6,18 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@revideo/ui',
-        replacement: '@revideo/ui/src/main.tsx',
+        find: '@reelgen/ui',
+        replacement: '@reelgen/ui/src/main.tsx',
       },
       {
-        find: '@revideo/2d/editor',
-        replacement: '@revideo/2d/src/editor',
+        find: '@reelgen/2d/editor',
+        replacement: '@reelgen/2d/src/editor',
       },
       {
         find: /@revideo\/2d(\/lib)?/,
-        replacement: '@revideo/2d/src/lib',
+        replacement: '@reelgen/2d/src/lib',
       },
-      {find: '@revideo/core', replacement: '@revideo/core/src'},
+      {find: '@reelgen/core', replacement: '@reelgen/core/src'},
     ],
   },
   plugins: [

@@ -1,10 +1,10 @@
-import type {Project, RenderVideoUserProjectSettings} from '@revideo/core';
+import type {Project, RenderVideoUserProjectSettings} from '@reelgen/core';
 import {
   Color,
   Renderer,
   Vector2,
   getFullRenderingSettings,
-} from '@revideo/core';
+} from '@reelgen/core';
 
 declare global {
   interface Window {

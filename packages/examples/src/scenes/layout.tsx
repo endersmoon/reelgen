@@ -1,5 +1,5 @@
-import {Circle, Layout, Rect, makeScene2D} from '@revideo/2d';
-import {all, createRef} from '@revideo/core';
+import {Circle, Layout, Rect, makeScene2D} from '@reelgen/2d';
+import {all, createRef} from '@reelgen/core';
 
 const RED = '#ff6470';
 

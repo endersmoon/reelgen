@@ -1,5 +1,5 @@
-import type {LogPayload, Logger} from '@revideo/core';
-import {EventDispatcher, LogLevel, ValueDispatcher} from '@revideo/core';
+import type {LogPayload, Logger} from '@reelgen/core';
+import {EventDispatcher, LogLevel, ValueDispatcher} from '@reelgen/core';
 
 export class LoggerManager {
   public get onInspected() {

@@ -1,4 +1,4 @@
-/** @jsxImportSource @revideo/2d/lib */
+/** @jsxImportSource @reelgen/2d/lib */
 import {
   Gradient,
   Img,
@@ -8,8 +8,8 @@ import {
   Spline,
   Txt,
   makeScene2D,
-} from '@revideo/2d';
-import {Vector2, all, createRef, useScene, waitFor} from '@revideo/core';
+} from '@reelgen/2d';
+import {Vector2, all, createRef, useScene, waitFor} from '@reelgen/core';
 
 /**
  * Some example data to use in the scene when no data is provided

@@ -1,7 +1,7 @@
-import type {Project} from '@revideo/core';
-import {Player, Stage, getFullPreviewSettings} from '@revideo/core';
+import type {Project} from '@reelgen/core';
+import {Player, Stage, getFullPreviewSettings} from '@reelgen/core';
 
-import {Vector2} from '@revideo/core';
+import {Vector2} from '@reelgen/core';
 
 const stylesNew = `
 .overlay {

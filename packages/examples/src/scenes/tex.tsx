@@ -1,5 +1,5 @@
-import {Latex, makeScene2D} from '@revideo/2d';
-import {createRef, waitFor} from '@revideo/core';
+import {Latex, makeScene2D} from '@reelgen/2d';
+import {createRef, waitFor} from '@reelgen/core';
 
 export default makeScene2D('tex', function* (view) {
   const tex = createRef<Latex>();

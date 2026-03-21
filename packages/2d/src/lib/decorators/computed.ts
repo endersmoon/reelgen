@@ -1,4 +1,4 @@
-import {createComputed} from '@revideo/core';
+import {createComputed} from '@reelgen/core';
 import {addInitializer} from './initializers';
 
 /**

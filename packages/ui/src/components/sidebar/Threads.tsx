@@ -1,6 +1,6 @@
 import styles from './Sidebar.module.scss';
 
-import {getTaskName, isThreadable, type Thread} from '@revideo/core';
+import {getTaskName, isThreadable, type Thread} from '@reelgen/core';
 import {
   useCurrentFrame,
   useCurrentScene,

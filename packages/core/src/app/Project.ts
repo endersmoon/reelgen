@@ -24,15 +24,15 @@ export function createVersionObject(version: string) {
 
 export type ExporterSettings =
   | {
-      name: '@revideo/core/image-sequence';
+      name: '@reelgen/core/image-sequence';
       options: ImageExporterOptions;
     }
   | {
-      name: '@revideo/core/ffmpeg';
+      name: '@reelgen/core/ffmpeg';
       options: FfmpegExporterOptions;
     }
   | {
-      name: '@revideo/core/wasm';
+      name: '@reelgen/core/wasm';
     };
 
 // Project settings that are used internally

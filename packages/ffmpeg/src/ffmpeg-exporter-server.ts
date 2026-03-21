@@ -2,8 +2,8 @@ import type {
   FfmpegExporterOptions,
   RendererResult,
   RendererSettings,
-} from '@revideo/core';
-import {EventName, sendEvent} from '@revideo/telemetry';
+} from '@reelgen/core';
+import {EventName, sendEvent} from '@reelgen/telemetry';
 import * as ffmpeg from 'fluent-ffmpeg';
 import * as os from 'os';
 import * as path from 'path';
@@ -40,7 +40,7 @@ export class FFmpegExporterServer {
   private readonly format: FfmpegExporterOptions['format'];
 
   public constructor(settings: FFmpegExporterSettings) {
-    if (settings.exporter.name !== '@revideo/core/ffmpeg') {
+    if (settings.exporter.name !== '@reelgen/core/ffmpeg') {
       throw new Error('Invalid exporter');
     }
 

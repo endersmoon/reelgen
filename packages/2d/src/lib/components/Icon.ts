@@ -3,8 +3,8 @@ import type {
   PossibleColor,
   SignalValue,
   SimpleSignal,
-} from '@revideo/core';
-import {useLogger} from '@revideo/core';
+} from '@reelgen/core';
+import {useLogger} from '@reelgen/core';
 import {colorSignal, computed, initial, signal} from '../decorators';
 import type {ImgProps} from './Img';
 import {Img} from './Img';

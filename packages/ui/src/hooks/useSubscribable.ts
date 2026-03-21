@@ -2,7 +2,7 @@ import type {
   EventHandler,
   Subscribable,
   SubscribableValueEvent,
-} from '@revideo/core';
+} from '@reelgen/core';
 import type {Inputs} from 'preact/hooks';
 import {useEffect, useState} from 'preact/hooks';
 

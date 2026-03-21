@@ -14,9 +14,9 @@ export default defineConfig({
   resolve: {
     alias: {
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      '@revideo/ui': '/src/main.tsx',
+      '@reelgen/ui': '/src/main.tsx',
       // eslint-disable-next-line @typescript-eslint/naming-convention
-      '@revideo/2d/editor': '@revideo/2d/src/editor',
+      '@reelgen/2d/editor': '@reelgen/2d/src/editor',
     },
   },
   build: {

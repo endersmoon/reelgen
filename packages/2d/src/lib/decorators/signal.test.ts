@@ -1,5 +1,5 @@
-import type {SimpleSignal} from '@revideo/core';
-import {DEFAULT} from '@revideo/core';
+import type {SimpleSignal} from '@reelgen/core';
+import {DEFAULT} from '@reelgen/core';
 import {beforeEach, describe, expect, test, vi} from 'vitest';
 import {initial, initializeSignals, parser, signal} from './signal';
 

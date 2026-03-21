@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/vite-plugin",
+  "name": "@reelgen/vite-plugin",
   "version": "0.10.4",
   "description": "A Vite plugin for revideo projects",
   "main": "lib/index.js",
@@ -25,19 +25,20 @@
     "lib"
   ],
   "devDependencies": {
-    "@revideo/telemetry": "0.10.4",
+    "@reelgen/telemetry": "0.10.4",
     "@types/follow-redirects": "^1.14.1",
     "@types/formidable": "^3.4.5",
     "@types/mime-types": "^2.1.1",
     "@types/ws": "^8.5.10"
   },
   "dependencies": {
-    "@revideo/ffmpeg": "0.10.4",
-    "ws": "^8.19.0",
+    "@reelgen/ffmpeg": "0.10.4",
     "fast-glob": "^3.3.1",
     "follow-redirects": "^1.15.2",
     "formidable": "^3.5.1",
     "mime-types": "^2.1.35",
-    "source-map": "^0.6.1"
-  }
+    "source-map": "^0.6.1",
+    "ws": "^8.19.0"
+  },
+  "gitHead": "c908ebf37f9e8b45c82a39681d5675e5d9be98e6"
 }

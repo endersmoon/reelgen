@@ -1,10 +1,10 @@
-import type {FFmpegExporterSettings} from '@revideo/ffmpeg';
+import type {FFmpegExporterSettings} from '@reelgen/ffmpeg';
 import {
   FFmpegExporterServer,
   VideoFrameExtractor,
   generateAudio,
   mergeMedia,
-} from '@revideo/ffmpeg';
+} from '@reelgen/ffmpeg';
 import * as fs from 'fs';
 import {existsSync, unlinkSync} from 'fs';
 import type {IncomingMessage, ServerResponse} from 'http';

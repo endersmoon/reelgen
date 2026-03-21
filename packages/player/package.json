@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/player",
+  "name": "@reelgen/player",
   "version": "0.10.4",
   "description": "A custom element for displaying animations made with revideo",
   "main": "dist/main.js",
@@ -22,8 +22,9 @@
     "types"
   ],
   "devDependencies": {
-    "@revideo/core": "0.10.4",
+    "@reelgen/core": "0.10.4",
     "sass": "^1.58.0",
     "terser": "^5.16.1"
-  }
+  },
+  "gitHead": "c908ebf37f9e8b45c82a39681d5675e5d9be98e6"
 }

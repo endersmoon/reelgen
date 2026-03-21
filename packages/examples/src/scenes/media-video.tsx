@@ -1,7 +1,7 @@
-import {Video, makeScene2D} from '@revideo/2d';
-import {createRef} from '@revideo/core';
+import {Video, makeScene2D} from '@reelgen/2d';
+import {createRef} from '@reelgen/core';
 
-import exampleMp4 from '@revideo/examples/assets/example.mp4';
+import exampleMp4 from '@reelgen/examples/assets/example.mp4';
 
 export default makeScene2D('media-video', function* (view) {
   const videoRef = createRef<Video>();

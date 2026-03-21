@@ -1,5 +1,5 @@
-import type {Vector2} from '@revideo/core';
-import {clamp, remap} from '@revideo/core';
+import type {Vector2} from '@reelgen/core';
+import {clamp, remap} from '@reelgen/core';
 import type {CurvePoint} from './CurvePoint';
 import type {PolynomialSegment} from './PolynomialSegment';
 

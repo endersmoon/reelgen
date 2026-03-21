@@ -1,5 +1,5 @@
 {
-  "name": "@revideo/core",
+  "name": "@reelgen/core",
   "version": "0.10.4",
   "description": "A web-based framework for creating videos programmatically",
   "main": "lib/index.js",
@@ -31,5 +31,6 @@
   "devDependencies": {
     "@types/culori": "^2.1.1",
     "jsdom": "^29.0.0"
-  }
+  },
+  "gitHead": "c908ebf37f9e8b45c82a39681d5675e5d9be98e6"
 }

@@ -1,5 +1,5 @@
 import {useComputed} from '@preact/signals';
-import type {PluginInspectorConfig} from '@revideo/ui';
+import type {PluginInspectorConfig} from '@reelgen/ui';
 import {
   AutoField,
   Button,
@@ -10,7 +10,7 @@ import {
   UnknownField,
   findAndOpenFirstUserFile,
   useApplication,
-} from '@revideo/ui';
+} from '@reelgen/ui';
 import {NodeInspectorKey, usePluginState} from './Provider';
 
 function Component() {

@@ -3,8 +3,8 @@ import type {
   SerializedVector2,
   SignalValue,
   SimpleSignal,
-} from '@revideo/core';
-import {Vector2, clamp} from '@revideo/core';
+} from '@reelgen/core';
+import {Vector2, clamp} from '@reelgen/core';
 import type {CurveDrawingInfo} from '../curves/CurveDrawingInfo';
 import type {CurvePoint} from '../curves/CurvePoint';
 import type {CurveProfile} from '../curves/CurveProfile';

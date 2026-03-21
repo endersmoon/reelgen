@@ -1,5 +1,5 @@
-import type {SerializedVector2, SignalValue, SimpleSignal} from '@revideo/core';
-import {BBox, DependencyContext, PlaybackState} from '@revideo/core';
+import type {SerializedVector2, SignalValue, SimpleSignal} from '@reelgen/core';
+import {BBox, DependencyContext, PlaybackState} from '@reelgen/core';
 import Hls from 'hls.js';
 import {computed, initial, nodeName, signal} from '../decorators';
 import type {DesiredLength} from '../partials';
