@@ -13,7 +13,7 @@ export function editorPlugin({editor, projects}: EditorPluginConfig): Plugin {
   const editorFile = fs.readFileSync(path.resolve(editorPath, 'editor.html'));
   const htmlParts = editorFile
     .toString()
-    .replace('{{style}}', `/@fs/${path.resolve(editorPath, 'style.css')}`)
+    .replace('{{style}}', `/@fs/${path.resolve(editorPath, 'main.css')}`)
     .split('{{source}}');
   const createHtml = (src: string) => htmlParts[0] + src + htmlParts[1];
 

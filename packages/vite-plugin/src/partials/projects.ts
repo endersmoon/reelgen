@@ -39,7 +39,6 @@ export function projectsPlugin({
         },
         optimizeDeps: {
           entries: projects.list.map(project => project.url),
-          exclude: ['preact', 'preact/*', '@preact/signals'],
         },
       };
     },
