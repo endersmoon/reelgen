@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/create",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "description": "Quickly scaffold revideo projects",
   "main": "index.js",
   "author": "revideo",
@@ -20,15 +20,15 @@
     "url": "https://github.com/havenhq/revideo.git"
   },
   "devDependencies": {
-    "@reelgen/2d": "0.10.4",
-    "@reelgen/core": "0.10.4",
-    "@reelgen/ffmpeg": "0.10.4",
-    "@reelgen/renderer": "0.10.4",
-    "@reelgen/ui": "0.10.4",
-    "@reelgen/vite-plugin": "0.10.4"
+    "@reelgen/2d": "^0.10.5",
+    "@reelgen/core": "^0.10.5",
+    "@reelgen/ffmpeg": "^0.10.5",
+    "@reelgen/renderer": "^0.10.5",
+    "@reelgen/ui": "^0.10.5",
+    "@reelgen/vite-plugin": "^0.10.5"
   },
   "dependencies": {
-    "@reelgen/telemetry": "0.10.4",
+    "@reelgen/telemetry": "^0.10.5",
     "minimist": "^1.2.8",
     "prompts": "^2.4.2"
   },
