@@ -1,0 +1,40 @@
+{
+  "name": "@reelgen/scene-builder",
+  "version": "0.11.0",
+  "description": "JSON/API-driven scene builder for Reelgen",
+  "author": "endersmoon",
+  "homepage": "https://github.com/endersmoon/reelgen",
+  "bugs": "https://github.com/endersmoon/reelgen/issues",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./validation": "./lib/validation.js"
+  },
+  "typesVersions": {
+    "*": {
+      "validation": [
+        "./lib/validation.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "tsc -p tsconfig.build.json -w",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endersmoon/reelgen.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@reelgen/2d": "^0.11.0",
+    "@reelgen/core": "^0.11.0",
+    "zod": "^3.23.0"
+  }
+}

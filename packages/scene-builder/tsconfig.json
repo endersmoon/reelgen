@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "inlineSourceMap": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es2022",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "quiz-video-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@reelgen/core": "*",
+    "@reelgen/2d": "*",
+    "@reelgen/ffmpeg": "*",
+    "@reelgen/renderer": "*",
+    "@reelgen/scene-builder": "*",
+    "@reelgen/mcp": "*",
+    "@reelgen/vite-plugin": "*",
+    "zod": "^3.25.0"
+  }
+}

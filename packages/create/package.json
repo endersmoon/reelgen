@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/create",
-  "version": "0.10.6",
+  "version": "0.11.0",
   "description": "Quickly scaffold revideo projects",
   "main": "index.js",
   "author": "endersmoon",
@@ -20,15 +20,15 @@
     "url": "https://github.com/endersmoon/reelgen.git"
   },
   "devDependencies": {
-    "@reelgen/2d": "^0.10.6",
-    "@reelgen/core": "^0.10.6",
-    "@reelgen/ffmpeg": "^0.10.6",
-    "@reelgen/renderer": "^0.10.6",
-    "@reelgen/ui": "^0.10.6",
-    "@reelgen/vite-plugin": "^0.10.6"
+    "@reelgen/2d": "^0.11.0",
+    "@reelgen/core": "^0.11.0",
+    "@reelgen/ffmpeg": "^0.11.0",
+    "@reelgen/renderer": "^0.11.0",
+    "@reelgen/ui": "^0.11.0",
+    "@reelgen/vite-plugin": "^0.11.0"
   },
   "dependencies": {
-    "@reelgen/telemetry": "^0.10.6",
+    "@reelgen/telemetry": "^0.11.0",
     "minimist": "^1.2.8",
     "prompts": "^2.4.2"
   },

@@ -1,155 +1,272 @@
 <br/>
 <p align="center">
-  <a href="https://re.video">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./logo_dark.svg">
-      <img width="360" alt="Revideo logo" src="./logo.svg">
-    </picture>
-  </a>
+  <img width="360" alt="Reelgen logo" src="./logo.svg">
 </p>
 <p align="center">
   <a href="https://lerna.js.org"><img src="https://img.shields.io/badge/published%20with-lerna-c084fc?style=flat" alt="published with lerna"></a>
   <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/powered%20by-vite-646cff?style=flat" alt="powered by vite"></a>
-  <a href="https://www.npmjs.com/package/@revideo/core"><img src="https://img.shields.io/npm/v/@revideo/core?style=flat" alt="npm package version"></a>
-  <a href="https://discord.com/invite/JDjbfp6q2G"><img src="https://img.shields.io/discord/1071029581009657896?style=flat&logo=discord&logoColor=fff&color=404eed" alt="discord"></a>
+  <a href="https://www.npmjs.com/package/@reelgen/core"><img src="https://img.shields.io/npm/v/@reelgen/core?style=flat" alt="npm version"></a>
 </p>
 <br/>
 
-> **Note:** This is a personal fork of [Revideo](https://github.com/redotvideo/revideo), maintained independently. The original project is no longer actively maintained, so this fork exists to continue development and apply custom modifications.
+# Reelgen
 
-# Revideo - Create Videos with Code
+Reelgen is an open-source TypeScript framework for creating and rendering programmatic videos. Scenes are defined as TypeScript generator functions with a signal-based reactivity system — then rendered headlessly via Puppeteer and exported to MP4 with FFmpeg.
 
-Revideo is an open source framework for programmatic video editing. It is forked
-from the amazing [Motion Canvas](https://motioncanvas.io/) editor, with the goal
-of turning it from a standalone application into a library that developers can
-use to build entire video editing apps.
+It is a maintained fork of [Revideo](https://github.com/redotvideo/revideo), which itself was forked from [Motion Canvas](https://motioncanvas.io/). Key additions in Reelgen:
 
-Revideo lets you create video templates in Typescript and deploy an API endpoint
-to render them with dynamic inputs. It also provides a React player component to
-preview changes in the browser in real-time. If you want to learn more, you can
-check out our [docs](https://docs.re.video/), our
-[examples repository](https://github.com/redotvideo/revideo-examples), and join
-our [Discord server](https://discord.com/invite/MVJsrqjy3j).
+- **JSON scene API** — define entire videos as plain JSON, no TypeScript required
+- **MCP server** — lets LLMs (Claude, GPT-4, etc.) render videos directly via tool calls
+- Active maintenance and bug fixes on top of the Revideo base
 
-#### News 🔥
+> **Node.js 20+ required.**
 
-- [05/21/2024] We released an
-  [example](https://github.com/redotvideo/revideo-examples/tree/main/google-cloud-run-parallelized)
-  on how to parallelize rendering jobs with Google Cloud Functions
-- [05/20/2024] We have a [new website](https://re.video/)!
+---
 
-<br/>
+## Quick Start
 
-## Getting Started
-
-To create an example project, run the following command:
+Scaffold a new project:
 
 ```bash
-npm init @revideo@latest
+npm init @reelgen@latest
 ```
 
-The example project will have the following code, which defines the video shown
-below.
+Or install manually:
+
+```bash
+npm install @reelgen/core @reelgen/2d @reelgen/renderer
+```
+
+---
+
+## TypeScript Scenes
+
+Scenes are TypeScript generator functions. The `yield*` syntax sequences animations; `yield` adds nodes to the view without waiting.
 
 ```tsx
-import {Audio, Img, Video, makeScene2D} from '@revideo/2d';
-import {all, chain, createRef, waitFor} from '@revideo/core';
+import { makeScene2D, Rect, Txt } from '@reelgen/2d';
+import { all, waitFor } from '@reelgen/core';
 
-export default makeScene2D('scene', function* (view) {
-  const logoRef = createRef<Img>();
+export default makeScene2D('intro', function* (view) {
+  const box = new Rect({
+    width: 400,
+    height: 200,
+    radius: 16,
+    fill: '#3b82f6',
+    opacity: 0,
+  });
 
-  yield view.add(
-    <>
-      <Video
-        src={'https://revideo-example-assets.s3.amazonaws.com/stars.mp4'}
-        size={['100%', '100%']}
-        play={true}
-      />
-      <Audio
-        src={'https://revideo-example-assets.s3.amazonaws.com/chill-beat.mp3'}
-        play={true}
-        time={17.0}
-      />
-    </>,
-  );
+  view.add(box);
 
+  // Fade in
+  yield* box.opacity(1, 0.6);
   yield* waitFor(1);
 
-  view.add(
-    <Img
-      width={'1%'}
-      ref={logoRef}
-      src={
-        'https://revideo-example-assets.s3.amazonaws.com/revideo-logo-white.png'
-      }
-    />,
-  );
-
-  yield* chain(
-    all(logoRef().scale(40, 2), logoRef().rotation(360, 2)),
-    logoRef().scale(60, 1),
+  // Animate out
+  yield* all(
+    box.scale(1.2, 0.4),
+    box.opacity(0, 0.4),
   );
 });
 ```
 
-https://github.com/havenhq/revideo/assets/122226645/4d4e56ba-5143-4e4b-9acf-d8a04330d162
+Start the visual editor:
 
-<br/>
+```bash
+npx revideo dev
+```
 
-## Differences between Revideo and Motion Canvas
+Render headlessly:
 
-Motion Canvas aims to be a
-[standalone editor](https://github.com/orgs/motion-canvas/discussions/1015) for
-animations. While it happens to be distributed as an npm package, the
-maintainers don't intend for it to be used as a library.
+```bash
+npx revideo render
+```
 
-We started out as users of Motion Canvas ourselves but ran into these
-limitations when we wanted to build a video editing app on top of it. After
-building our initial version using Motion Canvas' plugin system, we realized
-that we wanted to make more fundamental changes to the codebase that would be
-difficult to implement while keeping compatibility with the existing Motion
-Canvas API.
+Or render programmatically:
 
-That's why we decided to fork the project and turn it into Revideo. We wrote a
-bit more about it on our [blog](https://re.video/blog/fork).
+```ts
+import { renderVideo } from '@reelgen/renderer';
 
-Concretely, some of the differences to Motion Canvas are the following ones:
+await renderVideo({
+  projectFile: './src/project.ts',
+  settings: { outFile: 'output.mp4', outDir: './out' },
+});
+```
 
-- **Headless Rendering:** Motion Canvas currently requires you to press a button
-  in its UI to render a video. We have exposed this functionality as a
-  [function call](https://docs.re.video/renderer/renderVideo/) and are making it
-  possible to deploy a rendering API to services like Google Cloud Run
-  ([example](https://github.com/redotvideo/revideo-examples/tree/main/google-cloud-run),
-  or to use our CLI to expose a rendering endpoint from your Revideo project
-  ([docs](https://docs.re.video/render-endpoint))
-- **Faster Rendering:** When building an app rather than creating videos for
-  yourself, rendering speeds are quite important. We have sped up rendering
-  speeds by enabling
-  [parallelized rendering](https://github.com/redotvideo/revideo/pull/74) and
-  replacing the `seek()` operation for HTML video with our ffmpeg-based
-  [video frame extractor](https://github.com/redotvideo/revideo/pull/33)
-- **Better Audio Support:** We have enabled audio export from `<Video/>` tags
-  during rendering, and have also added an `<Audio/>` tag that makes it easy to
-  synchronize audio with your animations.
+---
 
-<br/>
+## JSON Scene API
+
+The `@reelgen/scene-builder` package lets you define videos as plain JSON — no TypeScript, no build step. This is the foundation for AI-generated video.
+
+```json
+{
+  "settings": { "width": 1920, "height": 1080, "fps": 30, "background": "#0f172a" },
+  "scenes": [
+    {
+      "id": "intro",
+      "nodes": [
+        {
+          "id": "title",
+          "type": "Txt",
+          "props": { "text": "Hello World", "fontSize": 64, "fill": "#ffffff", "opacity": 0 }
+        }
+      ],
+      "timeline": [
+        { "target": "title", "prop": "opacity", "to": 1, "duration": 0.8, "easing": "easeOutCubic" },
+        { "type": "wait", "duration": 2 },
+        { "target": "title", "prop": "opacity", "to": 0, "duration": 0.4 }
+      ]
+    }
+  ]
+}
+```
+
+Use it in code:
+
+```ts
+import { createScenesFromJSON } from '@reelgen/scene-builder';
+import { renderVideo } from '@reelgen/renderer';
+import { makeProject } from '@reelgen/core';
+
+const { scenes, settings } = createScenesFromJSON(json);
+
+const project = makeProject({
+  name: 'my-video',
+  scenes,
+  settings: {
+    shared: { size: { x: settings.width, y: settings.height } },
+    rendering: { fps: settings.fps },
+  },
+});
+```
+
+**Supported node types (21):** `Rect`, `Circle`, `Txt`, `Img`, `Video`, `Audio`, `Line`, `Polygon`, `Grid`, `Ray`, `Path`, `Spline`, `CubicBezier`, `QuadBezier`, `Knot`, `Latex`, `Code`, `Icon`, `SVG`, `Layout`, `Node`
+
+**Timeline features:** sequential steps, `parallel` blocks, `wait` steps, 31 easing functions, dot-path property access (`position.x`), transitions (`fade`, `slideLeft`, `zoomIn`, …)
+
+---
+
+## MCP Server (AI / Claude Integration)
+
+`@reelgen/mcp` is a [Model Context Protocol](https://modelcontextprotocol.io/) server that exposes Reelgen's rendering pipeline as tools for LLMs. With it, Claude (or any MCP-compatible model) can generate and render videos directly from a conversation.
+
+### Tools
+
+| Tool | Description |
+|---|---|
+| `get_schema` | Returns the full JSON scene schema reference. Call this first. |
+| `validate_scene` | Validates a scene definition without rendering — fast, cheap feedback loop. |
+| `list_node_types` | Lists all 21 node types and their props. |
+| `render_scene` | Renders a JSON scene to MP4. Accepts `outDir`, `outFile`, `workers`. |
+
+A `reelgen://schema` MCP resource is also available for clients that support resource reading.
+
+### Setup — Claude Code
+
+Add to `~/.claude.json` or your project's `.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "reelgen": {
+      "command": "npx",
+      "args": ["reelgen-mcp"],
+      "cwd": "/path/to/your/project"
+    }
+  }
+}
+```
+
+### Setup — Claude Desktop
+
+Add to `claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "reelgen": {
+      "command": "npx",
+      "args": ["reelgen-mcp"],
+      "cwd": "/path/to/your/project"
+    }
+  }
+}
+```
+
+`cwd` controls where rendered videos are saved (as `<cwd>/out/video.mp4` by default).
+
+### Typical workflow
+
+1. Claude calls `get_schema` to learn the JSON format
+2. You describe what you want: *"Make a 15-second product demo with a logo fade-in and animated bullet points"*
+3. Claude calls `validate_scene` to catch errors cheaply
+4. Claude iterates until valid, then calls `render_scene`
+5. Video appears at `out/video.mp4`
+
+### Example prompt
+
+> Using the reelgen MCP, create a quiz video that shows a question, reveals four answer options one by one, then highlights the correct answer in green.
+
+Claude will call `get_schema`, draft the JSON, validate it, and render — no code required on your end.
+
+---
+
+## Packages
+
+| Package | Description |
+|---|---|
+| `@reelgen/core` | Animation engine: generators, signals, tweening, threading |
+| `@reelgen/2d` | 2D renderer with 21 node types (shapes, text, media, SVG, layout) |
+| `@reelgen/renderer` | Headless rendering via Puppeteer |
+| `@reelgen/ffmpeg` | FFmpeg utilities for video export |
+| `@reelgen/vite-plugin` | Vite plugin + standalone backend server |
+| `@reelgen/scene-builder` | JSON-to-scene compiler |
+| `@reelgen/mcp` | MCP server for LLM integration |
+| `@reelgen/cli` | `revideo` CLI — dev server, render, serve |
+| `@reelgen/ui` | Visual editor (Preact) |
+| `@reelgen/player` | Vanilla JS custom element for previewing animations |
+| `@reelgen/player-react` | React wrapper for the player |
+| `@reelgen/create` | Project scaffolding (`npm init @reelgen@latest`) |
+
+---
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Build all packages
+npx lerna run build
+
+# Start the template dev server
+npm run template:dev
+
+# Run tests
+npm run core:test
+npm run 2d:test
+npm run e2e:test
+
+# Lint & format
+npx eslint --fix "**/*.ts?(x)"
+npx prettier --write .
+```
+
+See [CLAUDE.md](./CLAUDE.md) for full build and architecture documentation.
+
+---
 
 ## Telemetry
 
-To understand how people use Revideo, we **anonymously** track how many videos
-are rendered using the open-source tool
-[Posthog](https://github.com/PostHog/posthog). You can find our code
-implementing Posthog
-[here](https://github.com/redotvideo/revideo/tree/main/packages/telemetry).
-
-If you want to disable telemetry, just set the following environment variable:
+Anonymous render counts are tracked via [PostHog](https://github.com/PostHog/posthog). To opt out:
 
 ```bash
 DISABLE_TELEMETRY=true
 ```
 
-## Learn More
+---
 
-To learn more about Revideo, feel free to check out our
-[documentation](http://docs.re.video/) or join our
-[Discord server](https://discord.gg/hexYBZGBY8).
+## License
+
+MIT
