@@ -1,0 +1,35 @@
+{
+  "name": "@reelgen/mcp",
+  "version": "0.10.6",
+  "description": "MCP server — lets LLMs render videos via the Reelgen JSON scene API",
+  "author": "endersmoon",
+  "homepage": "https://github.com/endersmoon/reelgen",
+  "bugs": "https://github.com/endersmoon/reelgen/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "reelgen-mcp": "./bin/mcp.js"
+  },
+  "scripts": {
+    "dev": "tsc -p tsconfig.build.json -w",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/endersmoon/reelgen.git"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@reelgen/renderer": "^0.10.6",
+    "@reelgen/scene-builder": "^0.10.6",
+    "zod": "^3.23.0"
+  }
+}
