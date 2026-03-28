@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/cli",
-  "version": "0.10.5",
+  "version": "0.10.6",
   "description": "A CLI for revideo",
   "main": "dist/index.js",
   "author": "endersmoon",
@@ -25,9 +25,9 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "@reelgen/renderer": "^0.10.5",
-    "@reelgen/telemetry": "^0.10.5",
-    "@reelgen/vite-plugin": "^0.10.5",
+    "@reelgen/renderer": "^0.10.6",
+    "@reelgen/telemetry": "^0.10.6",
+    "@reelgen/vite-plugin": "^0.10.6",
     "chokidar": "^3.5.3",
     "commander": "^12.0.0",
     "cors": "^2.8.5",
