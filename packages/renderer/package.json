@@ -3,9 +3,9 @@
   "version": "0.10.5",
   "description": "A headless renderer for revideo",
   "main": "lib/server/index.js",
-  "author": "revideo",
-  "homepage": "https://re.video/",
-  "bugs": "https://github.com/havenhq/revideo/issues",
+  "author": "endersmoon",
+  "homepage": "https://github.com/endersmoon/reelgen",
+  "bugs": "https://github.com/endersmoon/reelgen/issues",
   "license": "MIT",
   "scripts": {
     "build": "npm run client:build && npm run server:build",
@@ -29,5 +29,5 @@
     "@reelgen/core": "^0.10.5",
     "ncp": "^2.0.0"
   },
-  "gitHead": "c908ebf37f9e8b45c82a39681d5675e5d9be98e6"
+  "gitHead": "9b11a9a821931e215882aaff4357a5baf72d5e83"
 }

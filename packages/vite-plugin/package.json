@@ -9,9 +9,9 @@
       "require": "./lib/index.js"
     }
   },
-  "author": "revideo",
-  "homepage": "https://re.video/",
-  "bugs": "https://github.com/havenhq/revideo/issues",
+  "author": "endersmoon",
+  "homepage": "https://github.com/endersmoon/reelgen",
+  "bugs": "https://github.com/endersmoon/reelgen/issues",
   "license": "MIT",
   "scripts": {
     "dev": "tsc -w",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/havenhq/revideo.git"
+    "url": "git+https://github.com/endersmoon/reelgen.git"
   },
   "files": [
     "lib"
@@ -40,5 +40,5 @@
     "source-map": "^0.6.1",
     "ws": "^8.19.0"
   },
-  "gitHead": "c908ebf37f9e8b45c82a39681d5675e5d9be98e6"
+  "gitHead": "9b11a9a821931e215882aaff4357a5baf72d5e83"
 }
