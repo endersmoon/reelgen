@@ -27,5 +27,5 @@
     "@types/fluent-ffmpeg": "^2.1.21",
     "@types/uuid": "^10.0.0"
   },
-  "gitHead": "9b11a9a821931e215882aaff4357a5baf72d5e83"
+  "gitHead": "48aab486733e26a735c5ce9154c3d0056a096470"
 }
