@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/renderer",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "A headless renderer for revideo",
   "main": "lib/server/index.js",
   "author": "endersmoon",
@@ -20,13 +20,13 @@
     "types"
   ],
   "dependencies": {
-    "@reelgen/ffmpeg": "^0.11.0",
-    "@reelgen/vite-plugin": "^0.11.0",
+    "@reelgen/ffmpeg": "^0.11.1",
+    "@reelgen/vite-plugin": "^0.11.1",
     "puppeteer": "^24.0.0",
     "vite": "^6.4.1"
   },
   "devDependencies": {
-    "@reelgen/core": "^0.11.0",
+    "@reelgen/core": "^0.11.1",
     "ncp": "^2.0.0"
   },
   "gitHead": "573e26074139cf7646c65276ba3261d76ef49095"

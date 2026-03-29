@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/mcp",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "MCP server — lets LLMs render videos via the Reelgen JSON scene API",
   "author": "endersmoon",
   "homepage": "https://github.com/endersmoon/reelgen",
@@ -28,8 +28,8 @@
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
-    "@reelgen/renderer": "^0.11.0",
-    "@reelgen/scene-builder": "^0.11.0",
+    "@reelgen/renderer": "^0.11.1",
+    "@reelgen/scene-builder": "^0.11.1",
     "zod": "^3.23.0"
   }
 }
