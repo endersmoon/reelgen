@@ -81,7 +81,6 @@ See [Rendering — HTTP Render Server](./rendering.md#http-render-server) for fu
 
 | Variable | Description |
 |---|---|
-| `DISABLE_TELEMETRY` | Set to `"true"` to opt out of anonymous render-count tracking via PostHog |
 | `PROJECT_FILE` | Project file path override (used internally by `revideo serve`) |
 | `REVIDEO_PORT` | Server port override (used internally by `revideo serve`) |
 
