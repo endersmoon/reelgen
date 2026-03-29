@@ -212,6 +212,20 @@ Claude will call `get_schema`, draft the JSON, validate it, and render — no co
 
 ---
 
+## Documentation
+
+| Guide | Description |
+|---|---|
+| [Getting Started](./docs/getting-started.md) | Installation, project setup, first scene |
+| [TypeScript Scenes](./docs/typescript-scenes.md) | Generator-based animation API |
+| [JSON Scene API](./docs/json-scene-api.md) | Full JSON schema reference |
+| [Node Types](./docs/node-types.md) | All 21 node types and their props |
+| [MCP Integration](./docs/mcp-integration.md) | Claude / LLM integration setup |
+| [Rendering](./docs/rendering.md) | Headless rendering options and config |
+| [CLI Reference](./docs/cli-reference.md) | All `revideo` CLI commands |
+
+---
+
 ## Packages
 
 | Package | Description |
