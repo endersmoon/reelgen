@@ -1,7 +1,5 @@
 <br/>
-<p align="center">
-  <img width="360" alt="Reelgen logo" src="./logo.svg">
-</p>
+
 <p align="center">
   <a href="https://lerna.js.org"><img src="https://img.shields.io/badge/published%20with-lerna-c084fc?style=flat" alt="published with lerna"></a>
   <a href="https://vitejs.dev"><img src="https://img.shields.io/badge/powered%20by-vite-646cff?style=flat" alt="powered by vite"></a>
