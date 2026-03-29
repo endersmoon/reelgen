@@ -7,9 +7,9 @@ Reelgen supports three rendering modes: CLI, programmatic Node.js API, and an HT
 ## CLI Render
 
 ```bash
-npx revideo render
+npx reelgen render
 # or with a custom project file:
-npx revideo render --projectFile ./src/project.ts
+npx reelgen render --projectFile ./src/project.ts
 ```
 
 Output lands at `./output/<filename>.mp4`. The filename comes from the `outFile` in your project settings, or a generated UUID.
@@ -95,10 +95,10 @@ await renderVideo({
 
 ## HTTP Render Server
 
-`revideo serve` exposes a REST endpoint so external systems can trigger renders. This is useful for SaaS backends, render queues, and webhook-driven workflows.
+`reelgen serve` exposes a REST endpoint so external systems can trigger renders. This is useful for SaaS backends, render queues, and webhook-driven workflows.
 
 ```bash
-npx revideo serve --projectFile ./src/project.ts --port 4000
+npx reelgen serve --projectFile ./src/project.ts --port 4000
 ```
 
 The server exposes two endpoints:
@@ -258,5 +258,5 @@ WebM/VP9 output is on the roadmap (see [ROADMAP.md](../ROADMAP.md)).
 | Variable | Description |
 |---|---|
 | `DISABLE_TELEMETRY` | Set to `"true"` to opt out of anonymous render-count tracking |
-| `PROJECT_FILE` | Project file path (used internally by `revideo serve`) |
-| `REVIDEO_PORT` | Server port override (used internally by `revideo serve`) |
+| `PROJECT_FILE` | Project file path (used internally by `reelgen serve`) |
+| `REVIDEO_PORT` | Server port override (used internally by `reelgen serve`) |

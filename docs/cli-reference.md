@@ -1,21 +1,21 @@
 # CLI Reference
 
-The Reelgen CLI is provided by `@reelgen/cli`. The binary is named `revideo` for historical compatibility with the upstream Revideo project.
+The Reelgen CLI is provided by `@reelgen/cli`. The binary is named `reelgen` for historical compatibility with the upstream Revideo project.
 
 ```bash
-npx revideo <command> [options]
+npx reelgen <command> [options]
 ```
 
 ---
 
-## `revideo editor`
+## `reelgen editor`
 
 Starts the Vite dev server with the visual editor UI.
 
 ```bash
-npx revideo editor
-npx revideo editor --projectFile ./src/project.ts
-npx revideo editor --port 9001
+npx reelgen editor
+npx reelgen editor --projectFile ./src/project.ts
+npx reelgen editor --port 9001
 ```
 
 | Option | Default | Description |
@@ -27,13 +27,13 @@ Opens `http://localhost:<port>` in the browser. Supports HMR — scene changes r
 
 ---
 
-## `revideo render`
+## `reelgen render`
 
 Renders the project headlessly to MP4 via Puppeteer + FFmpeg.
 
 ```bash
-npx revideo render
-npx revideo render --projectFile ./src/project.ts
+npx reelgen render
+npx reelgen render --projectFile ./src/project.ts
 ```
 
 | Option | Default | Description |
@@ -46,13 +46,13 @@ For programmatic rendering with more options (workers, variables, progress callb
 
 ---
 
-## `revideo serve`
+## `reelgen serve`
 
 Starts an Express HTTP server that exposes a `POST /render` endpoint. Useful for backend integrations and render queues.
 
 ```bash
-npx revideo serve
-npx revideo serve --projectFile ./src/project.ts --port 4000
+npx reelgen serve
+npx reelgen serve --projectFile ./src/project.ts --port 4000
 ```
 
 | Option | Default | Description |
@@ -81,11 +81,8 @@ See [Rendering — HTTP Render Server](./rendering.md#http-render-server) for fu
 
 | Variable | Description |
 |---|---|
-| `PROJECT_FILE` | Project file path override (used internally by `revideo serve`) |
-| `REVIDEO_PORT` | Server port override (used internally by `revideo serve`) |
+| `PROJECT_FILE` | Project file path override (used internally by `reelgen serve`) |
+| `REVIDEO_PORT` | Server port override (used internally by `reelgen serve`) |
 
 ---
 
-## Note on the binary name
-
-The CLI binary is named `revideo` because Reelgen is a fork of Revideo. Keeping the binary name avoids breaking existing scripts and CI configurations that were written for Revideo. The npm package is `@reelgen/cli`.

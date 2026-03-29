@@ -28,14 +28,14 @@ my-video/
 Start the visual editor:
 
 ```bash
-npx revideo editor
+npx reelgen editor
 # opens http://localhost:9000
 ```
 
 Render headlessly to MP4:
 
 ```bash
-npx revideo render
+npx reelgen render
 # output/video.mp4
 ```
 

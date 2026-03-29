@@ -1,7 +1,7 @@
 {
   "name": "@reelgen/cli",
   "version": "0.11.1",
-  "description": "A CLI for revideo",
+  "description": "A CLI for reelgen",
   "main": "dist/index.js",
   "author": "endersmoon",
   "homepage": "https://github.com/endersmoon/reelgen",
@@ -13,7 +13,7 @@
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "bin": {
-    "revideo": "dist/index.js"
+    "reelgen": "dist/index.js"
   },
   "files": [
     "dist",

@@ -71,13 +71,13 @@ export default makeScene2D('intro', function* (view) {
 Start the visual editor:
 
 ```bash
-npx revideo dev
+npx reelgen editor
 ```
 
 Render headlessly:
 
 ```bash
-npx revideo render
+npx reelgen render
 ```
 
 Or render programmatically:
@@ -220,7 +220,7 @@ Claude will call `get_schema`, draft the JSON, validate it, and render — no co
 | [Node Types](./docs/node-types.md) | All 21 node types and their props |
 | [MCP Integration](./docs/mcp-integration.md) | Claude / LLM integration setup |
 | [Rendering](./docs/rendering.md) | Headless rendering options and config |
-| [CLI Reference](./docs/cli-reference.md) | All `revideo` CLI commands |
+| [CLI Reference](./docs/cli-reference.md) | All `reelgen` CLI commands |
 
 ---
 
@@ -235,7 +235,7 @@ Claude will call `get_schema`, draft the JSON, validate it, and render — no co
 | `@reelgen/vite-plugin` | Vite plugin + standalone backend server |
 | `@reelgen/scene-builder` | JSON-to-scene compiler |
 | `@reelgen/mcp` | MCP server for LLM integration |
-| `@reelgen/cli` | `revideo` CLI — dev server, render, serve |
+| `@reelgen/cli` | `reelgen` CLI — dev server, render, serve |
 | `@reelgen/ui` | Visual editor (Preact) |
 | `@reelgen/player` | Vanilla JS custom element for previewing animations |
 | `@reelgen/player-react` | React wrapper for the player |

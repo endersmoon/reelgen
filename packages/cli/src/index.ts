@@ -9,8 +9,8 @@ const program = new Command();
 const VERSION = '0.10.4';
 
 program
-  .name('revideo')
-  .description('CLI to interact with the revideo service')
+  .name('reelgen')
+  .description('CLI to interact with the reelgen service')
   .version(VERSION);
 
 program
@@ -37,7 +37,7 @@ program
 
 program
   .command('editor')
-  .description('Start the revideo editor')
+  .description('Start the reelgen editor')
   .option(
     '--projectFile <path>',
     'Path to the project file',
