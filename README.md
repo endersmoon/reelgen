@@ -269,16 +269,6 @@ See [CLAUDE.md](./CLAUDE.md) for full build and architecture documentation.
 
 ---
 
-## Telemetry
-
-Anonymous render counts are tracked via [PostHog](https://github.com/PostHog/posthog). To opt out:
-
-```bash
-DISABLE_TELEMETRY=true
-```
-
----
-
 ## License
 
 MIT

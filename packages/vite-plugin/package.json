@@ -25,8 +25,7 @@
     "lib"
   ],
   "devDependencies": {
-    "@reelgen/telemetry": "^0.11.0",
-    "@types/follow-redirects": "^1.14.1",
+"@types/follow-redirects": "^1.14.1",
     "@types/formidable": "^3.4.5",
     "@types/mime-types": "^2.1.1",
     "@types/ws": "^8.5.10"

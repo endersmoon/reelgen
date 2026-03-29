@@ -26,8 +26,7 @@
   },
   "dependencies": {
     "@reelgen/renderer": "^0.11.0",
-    "@reelgen/telemetry": "^0.11.0",
-    "@reelgen/vite-plugin": "^0.11.0",
+"@reelgen/vite-plugin": "^0.11.0",
     "chokidar": "^3.5.3",
     "commander": "^12.0.0",
     "cors": "^2.8.5",

@@ -4,7 +4,6 @@ import {
   assetsPlugin,
   editorPlugin,
   metaPlugin,
-  metricsPlugin,
   projectsPlugin,
   settingsPlugin,
   webglPlugin,
@@ -90,7 +89,6 @@ export interface MotionCanvasPluginConfig {
    * When set to `true`, the following plugins are excluded:
    * - `editorPlugin` — serves editor HTML (not needed for headless rendering)
    * - `assetsPlugin` — HMR-based asset watching (no HMR in render mode)
-   * - `metricsPlugin` — telemetry for editor startup
    * - `settingsPlugin` — editor settings virtual module
    *
    * The remaining plugins (`metaPlugin`, `projectsPlugin`, `webglPlugin`, and
@@ -162,7 +160,6 @@ export default ({
       // wasmExporterPlugin, rivePlugin
       editorPlugin({editor, projects}),
       assetsPlugin({bufferedAssets}),
-      metricsPlugin(),
     );
   }
 

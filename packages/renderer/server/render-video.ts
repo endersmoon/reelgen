@@ -12,7 +12,6 @@ import {
   getVideoDuration,
   mergeAudioWithVideo,
 } from '@reelgen/ffmpeg';
-import {EventName, sendEvent} from '@reelgen/telemetry';
 import motionCanvas from '@reelgen/vite-plugin';
 import * as fs from 'fs';
 import * as os from 'os';
@@ -261,12 +260,7 @@ async function renderVideoOnPage(
     throw new Error('Server address is null');
   }
 
-  // only report for worker 0
-  if (id === 0) {
-    sendEvent(EventName.RenderStarted);
-  }
-
-  // Attach logs from puppeteer to the console
+// Attach logs from puppeteer to the console
   page.on('console', msg => {
     for (let i = 0; i < msg.args().length; ++i) {
       const message = msg.args()[i];

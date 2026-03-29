@@ -3,7 +3,6 @@ import type {
   RendererResult,
   RendererSettings,
 } from '@reelgen/core';
-import {EventName, sendEvent} from '@reelgen/telemetry';
 import * as ffmpeg from 'fluent-ffmpeg';
 import * as os from 'os';
 import * as path from 'path';
@@ -98,8 +97,8 @@ export class FFmpegExporterServer {
       try {
         this.command.kill('SIGKILL');
         await this.promise;
-      } catch (err) {
-        sendEvent(EventName.Error, {message: (err as Error).message});
+      } catch (_err) {
+        // swallow kill error
       }
     } else {
       await this.promise;
