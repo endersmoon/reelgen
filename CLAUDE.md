@@ -67,8 +67,8 @@ under `@reelgen/*` and live under `packages/`.
 
 ### Tooling packages
 
-- **cli** — CLI (`revideo serve`, `revideo editor`) built with Commander +
-  Express. Package is `@reelgen/cli`; the binary name remains `revideo`.
+- **cli** — CLI (`reelgen serve`, `reelgen editor`) built with Commander +
+  Express. Package is `@reelgen/cli`; binary name is `reelgen`.
 - **create** — Project scaffolding (`npm init @reelgen@latest`).
 - **template** — Example project used for local development and testing changes.
 - **e2e** — E2E test suite.
