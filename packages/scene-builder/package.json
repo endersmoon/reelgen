@@ -1,6 +1,6 @@
 {
   "name": "@reelgen/scene-builder",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "JSON/API-driven scene builder for Reelgen",
   "author": "endersmoon",
   "homepage": "https://github.com/endersmoon/reelgen",
@@ -33,8 +33,8 @@
     "lib"
   ],
   "dependencies": {
-    "@reelgen/2d": "^0.11.1",
-    "@reelgen/core": "^0.11.1",
+    "@reelgen/2d": "^0.11.2",
+    "@reelgen/core": "^0.11.2",
     "zod": "^3.23.0"
   }
 }
